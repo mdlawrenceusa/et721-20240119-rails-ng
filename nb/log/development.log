@@ -1,0 +1,324 @@
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: b584c546c2964eeda6abf6df8eae3209.vfs.cloud9.us-east-1.amazonaws.com
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: b584c546c2964eeda6abf6df8eae3209.vfs.cloud9.us-east-1.amazonaws.com
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: b584c546c2964eeda6abf6df8eae3209.vfs.cloud9.us-east-1.amazonaws.com
+Started GET "/" for 98.97.17.12 at 2024-01-19 14:45:57 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-3.2.1/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-3.2.1/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.3ms | Allocations: 374)
+Completed 200 OK in 38ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 4919)
+
+
+Started GET "/" for 98.97.17.12 at 2024-01-19 14:46:05 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-3.2.1/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-3.2.1/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 210)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (5.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-01-19 14:49:59.722654', '2024-01-19 14:49:59.722659') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePresidents (20240119144941)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "presidents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "comment" text, "image_url" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240119144941') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 98.97.17.12 at 2024-01-19 14:53:34 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-3.2.1/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-3.2.1/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.8ms | Allocations: 265)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 904)
+
+
+Started GET "/presidents" for 98.97.17.12 at 2024-01-19 14:53:45 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/index.html.erb within layouts/application
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents"[0m
+  ↳ app/views/presidents/index.html.erb:6
+  Rendered presidents/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1542)
+  Rendered layout layouts/application.html.erb (Duration: 952.7ms | Allocations: 88891)
+Completed 200 OK in 1018ms (Views: 969.0ms | ActiveRecord: 1.6ms | Allocations: 98833)
+
+
+Started GET "/presidents" for 98.97.17.12 at 2024-01-19 14:56:05 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/index.html.erb within layouts/application
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents"[0m
+  ↳ app/views/presidents/index.html.erb:6
+  Rendered presidents/index.html.erb within layouts/application (Duration: 23.3ms | Allocations: 3782)
+  Rendered layout layouts/application.html.erb (Duration: 50.6ms | Allocations: 18592)
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 1.7ms | Allocations: 20153)
+
+
+Started GET "/presidents" for 98.97.17.12 at 2024-01-19 15:07:16 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/index.html.erb within layouts/application
+  [1m[36mPresident Load (2.9ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents"[0m
+  ↳ app/views/presidents/index.html.erb:9
+  Rendered presidents/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1241)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 15902)
+Completed 200 OK in 41ms (Views: 33.0ms | ActiveRecord: 5.4ms | Allocations: 17458)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPresident Create (4.0ms)[0m  [1m[32mINSERT INTO "presidents" ("name", "comment", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Thomas Woodrow Wilson"], ["comment", "Woodrow Wilson was the 28th President of the United States, serving from 1913 to 1921. He was a scholar, writer, and politician who played a significant role in shaping American politics and foreign policy during a period of profound change. Wilson is remembered for his leadership during World War I and his advocacy for the League of Nations, an international organization created to promote world peace and cooperation. He also signed several important pieces of legislation, including the Clayton Antitrust Act and the Federal Reserve Act. Despite his accomplishments, Wilson's presidency was also marked by controversy, including his support for segregation and his handling of the Spanish flu pandemic."], ["image_url", "http://146.111.120.96/SP23/ET_710_C3/NBaguaei06/Thomas_Woodrow_Wilson,_Harris_%26_Ewing_bw_photo_portrait,_1919_(cropped).jpg"], ["created_at", "2024-01-19 15:07:49.195325"], ["updated_at", "2024-01-19 15:07:49.195325"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPresident Create (1.0ms)[0m  [1m[32mINSERT INTO "presidents" ("name", "comment", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Donald John Trump"], ["comment", "Donald Trump is a charismatic and ambitious businessman who rose to political prominence through his passionate advocacy for American values and the American people. As a leader, he was known for his unwavering commitment to putting America first, and his efforts to create jobs, strengthen the economy, and improve national security. Trump's leadership style was characterized by his ability to inspire and motivate those around him, and he had a talent for connecting with people from all walks of life. Despite facing numerous challenges and obstacles during his presidency, Trump remained determined and focused on achieving his goals, and his legacy continues to inspire many Americans today."], ["image_url", "http://146.111.120.96/SP23/ET_710_C3/NBaguaei06/Donald_Trump_official_portrait.jpg"], ["created_at", "2024-01-19 15:07:49.211381"], ["updated_at", "2024-01-19 15:07:49.211381"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPresident Create (7.3ms)[0m  [1m[32mINSERT INTO "presidents" ("name", "comment", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "John Fitzgerald Kennedy"], ["comment", "John F. Kennedy, often referred to as JFK, was the 35th President of the United States, serving from 1961 until his assassination in 1963. He was a charismatic leader who inspired a generation with his vision of a more just and peaceful world. Kennedy is best known for his efforts to improve civil rights, his support for the space program, and his handling of the Cuban Missile Crisis. He also signed several important pieces of legislation into law, including the Equal Pay Act and the Civil Rights Act of 1964, which helped to advance the cause of civil rights in America. Despite his short tenure in office, Kennedy remains one of the most beloved and admired presidents in American history."], ["image_url", "http://146.111.120.96/SP23/ET_710_C3/NBaguaei06/John_F_Kennedy.jpg"], ["created_at", "2024-01-19 15:07:49.214444"], ["updated_at", "2024-01-19 15:07:49.214444"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPresident Create (13.0ms)[0m  [1m[32mINSERT INTO "presidents" ("name", "comment", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Barack Hussein Obama II"], ["comment", "Barack Obama served as the 44th President of the United States from 2009 to 2017. He made history as the first African American to hold the position of President. During his tenure, Obama introduced several important initiatives, including the Affordable Care Act, which expanded access to healthcare for millions of Americans. He also worked to address climate change, signing the Paris Agreement in 2015, and implemented policies to support renewable energy. Obama also made significant strides in promoting equality and social justice, advocating for LGBTQ+ rights and supporting the Black Lives Matter movement. He remains a highly respected and influential figure in American politics and continues to work on issues related to democracy and social justice."], ["image_url", "http://146.111.120.96/SP23/ET_710_C3/NBaguaei06/President_Barack_Obama.jpg"], ["created_at", "2024-01-19 15:07:49.236958"], ["updated_at", "2024-01-19 15:07:49.236958"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/presidents" for 98.97.17.12 at 2024-01-19 15:08:05 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/index.html.erb within layouts/application
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents"[0m
+  ↳ app/views/presidents/index.html.erb:9
+  Rendered presidents/index.html.erb within layouts/application (Duration: 29.5ms | Allocations: 15052)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 16170)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.6ms | Allocations: 16426)
+
+
+Started GET "/presidents/1" for 98.97.17.12 at 2024-01-19 15:08:16 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPresident Load (0.2ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents" WHERE "presidents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/presidents_controller.rb:63:in `set_president'
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/show.html.erb within layouts/application
+  Rendered presidents/_president.html.erb (Duration: 2.2ms | Allocations: 220)
+  Rendered presidents/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1275)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 2388)
+Completed 200 OK in 35ms (Views: 24.7ms | ActiveRecord: 0.2ms | Allocations: 5338)
+
+
+Started GET "/presidents" for 98.97.17.12 at 2024-01-19 15:10:59 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/index.html.erb within layouts/application
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents"[0m
+  ↳ app/views/presidents/index.html.erb:9
+  Rendered presidents/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 4455)
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 19262)
+Completed 200 OK in 47ms (Views: 39.0ms | ActiveRecord: 5.7ms | Allocations: 20822)
+
+
+Started GET "/presidents/1" for 98.97.17.12 at 2024-01-19 15:11:26 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPresident Load (0.2ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents" WHERE "presidents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/presidents_controller.rb:63:in `set_president'
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/show.html.erb within layouts/application
+  Rendered presidents/_president.html.erb (Duration: 1.0ms | Allocations: 197)
+  Rendered presidents/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 970)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2083)
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 3394)
+
+
+Started GET "/presidents/1" for 98.97.17.12 at 2024-01-19 15:11:31 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents" WHERE "presidents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/presidents_controller.rb:63:in `set_president'
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/show.html.erb within layouts/application
+  Rendered presidents/_president.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered presidents/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 485)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 1598)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 2202)
+
+
+Started GET "/presidents" for 98.97.17.12 at 2024-01-19 15:15:04 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/index.html.erb within layouts/application
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents"[0m
+  ↳ app/views/presidents/index.html.erb:8
+  Rendered presidents/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 4427)
+  Rendered layout layouts/application.html.erb (Duration: 93.2ms | Allocations: 19233)
+Completed 200 OK in 99ms (Views: 76.6ms | ActiveRecord: 20.4ms | Allocations: 20793)
+
+
+Started GET "/presidents/1" for 98.97.17.12 at 2024-01-19 15:15:20 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPresident Load (0.2ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents" WHERE "presidents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/presidents_controller.rb:63:in `set_president'
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/show.html.erb within layouts/application
+  Rendered presidents/_president.html.erb (Duration: 1.0ms | Allocations: 197)
+  Rendered presidents/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 998)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2111)
+Completed 200 OK in 17ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 3423)
+
+
+Started GET "/presidents" for 98.97.17.12 at 2024-01-19 15:16:16 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/index.html.erb within layouts/application
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents"[0m
+  ↳ app/views/presidents/index.html.erb:8
+  Rendered presidents/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 4412)
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 19073)
+Completed 200 OK in 57ms (Views: 45.4ms | ActiveRecord: 8.9ms | Allocations: 20631)
+
+
+Started GET "/" for 98.97.17.12 at 2024-01-19 15:18:33 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/index.html.erb within layouts/application
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents"[0m
+  ↳ app/views/presidents/index.html.erb:8
+  Rendered presidents/index.html.erb within layouts/application (Duration: 25.9ms | Allocations: 4456)
+  Rendered layout layouts/application.html.erb (Duration: 61.9ms | Allocations: 19263)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 2.0ms | Allocations: 20823)
+
+
+Started GET "/presidents/1" for 98.97.17.12 at 2024-01-19 15:22:07 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents" WHERE "presidents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/presidents_controller.rb:63:in `set_president'
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/show.html.erb within layouts/application
+  Rendered presidents/_president.html.erb (Duration: 0.9ms | Allocations: 225)
+  Rendered presidents/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1098)
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 15737)
+Completed 200 OK in 52ms (Views: 35.7ms | ActiveRecord: 2.1ms | Allocations: 21317)
+
+
+Started GET "/presidents/1" for 98.97.17.12 at 2024-01-19 15:24:55 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents" WHERE "presidents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/presidents_controller.rb:63:in `set_president'
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/show.html.erb within layouts/application
+  Rendered presidents/_president.html.erb (Duration: 0.5ms | Allocations: 244)
+  Rendered presidents/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1091)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 15878)
+Completed 200 OK in 57ms (Views: 40.4ms | ActiveRecord: 7.1ms | Allocations: 21521)
+
+
+Started GET "/presidents/1" for 98.97.17.12 at 2024-01-19 15:26:02 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents" WHERE "presidents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/presidents_controller.rb:63:in `set_president'
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/show.html.erb within layouts/application
+  Rendered presidents/_president.html.erb (Duration: 0.5ms | Allocations: 219)
+  Rendered presidents/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 38.3ms | Allocations: 15841)
+Completed 200 OK in 61ms (Views: 43.8ms | ActiveRecord: 5.6ms | Allocations: 21421)
+
+
+Started GET "/presidents" for 98.97.17.12 at 2024-01-19 15:26:15 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/index.html.erb within layouts/application
+  [1m[36mPresident Load (0.2ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents"[0m
+  ↳ app/views/presidents/index.html.erb:8
+  Rendered presidents/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1259)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2381)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.2ms | Allocations: 2726)
+
+
+Started GET "/presidents/3" for 98.97.17.12 at 2024-01-19 15:26:22 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents" WHERE "presidents"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/presidents_controller.rb:63:in `set_president'
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/show.html.erb within layouts/application
+  Rendered presidents/_president.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered presidents/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 494)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 1607)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 0.1ms | Allocations: 2210)
+
+
+Started GET "/presidents/new" for 98.97.17.12 at 2024-01-19 15:26:52 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/new.html.erb within layouts/application
+  Rendered presidents/_form.html.erb (Duration: 21.4ms | Allocations: 6612)
+  Rendered presidents/new.html.erb within layouts/application (Duration: 24.8ms | Allocations: 6897)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 8014)
+Completed 200 OK in 33ms (Views: 32.8ms | ActiveRecord: 0.0ms | Allocations: 8364)
+
+
+Started POST "/presidents" for 98.97.17.12 at 2024-01-19 15:28:05 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "president"=>{"name"=>"George Washington ", "comment"=>"George Washington (February 22, 1732 – December 14, 1799) was an American Founding Father, military officer, politician and statesman who served as the first president of the United States from 1789 to 1797. Appointed by the Second Continental Congress as commander of the Continental Army in June 1775, Washington led Patriot forces to victory in the American Revolutionary War and then served as president of the Constitutional Convention in 1787, which drafted and ratified the Constitution of the United States and established the American federal government. Washington has thus been called the \"Father of the Nation\". ", "image_url"=>"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/988px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg"}, "commit"=>"Create President"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/presidents_controller.rb:27:in `block in create'
+  [1m[36mPresident Create (5.0ms)[0m  [1m[32mINSERT INTO "presidents" ("name", "comment", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "George Washington "], ["comment", "George Washington (February 22, 1732 – December 14, 1799) was an American Founding Father, military officer, politician and statesman who served as the first president of the United States from 1789 to 1797. Appointed by the Second Continental Congress as commander of the Continental Army in June 1775, Washington led Patriot forces to victory in the American Revolutionary War and then served as president of the Constitutional Convention in 1787, which drafted and ratified the Constitution of the United States and established the American federal government. Washington has thus been called the \"Father of the Nation\". "], ["image_url", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/988px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg"], ["created_at", "2024-01-19 15:28:05.874683"], ["updated_at", "2024-01-19 15:28:05.874683"]]
+  ↳ app/controllers/presidents_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/presidents_controller.rb:27:in `block in create'
+Redirected to https://b584c546c2964eeda6abf6df8eae3209.vfs.cloud9.us-east-1.amazonaws.com/presidents/5
+Completed 302 Found in 15ms (ActiveRecord: 9.0ms | Allocations: 3321)
+
+
+Started GET "/presidents/5" for 98.97.17.12 at 2024-01-19 15:28:05 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents" WHERE "presidents"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/presidents_controller.rb:63:in `set_president'
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/show.html.erb within layouts/application
+  Rendered presidents/_president.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered presidents/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 565)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 1679)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 2328)
+
+
+Started GET "/presidents" for 98.97.17.12 at 2024-01-19 15:28:10 +0000
+Cannot render console from 98.97.17.12! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PresidentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presidents/index.html.erb within layouts/application
+  [1m[36mPresident Load (0.1ms)[0m  [1m[34mSELECT "presidents".* FROM "presidents"[0m
+  ↳ app/views/presidents/index.html.erb:8
+  Rendered presidents/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1048)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2166)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 2423)
+
+

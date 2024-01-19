@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Presidents</h1>
+
+
+<div class="alignRow">
+  <div id="presidents">
+    <% @presidents.each do |president| %>
+      <div class="imageColumn">
+        <h2>
+          <%= link_to president.name, president %>
+        </h2>
+        <p>
+          <%= link_to(image_tag(president.image_url, alt: president.name, style: "width:100%"), president) %>
+        </p>
+      </div>
+  <% end %>
+  </div>
+</div>
+
+<%= link_to "New president", new_president_path %>

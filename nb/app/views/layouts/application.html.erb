@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nb</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    
+    <style>
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+h1{
+   text-align: center;
+}
+</style>
+</head>
+<body>
+    
+    <style>
+body {
+  background-image: url("http://146.111.120.96/SP23/ET_710_C3/NBaguaei06/Flag.jpeg");
+  background-position: 50% 50%;
+  background-repeat: repeat;
+}
+</style>
+    
+    
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
